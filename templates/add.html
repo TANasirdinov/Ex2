@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Gallery: Добавление {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Добавить картинку</h2>
+            <form action="{{ url_for('add_pic') }}" method="POST">
+                <div class="input-group mb-3 input-group-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">URL картинки</span>
+                    </div>
+                    <input type="url" name="picture" placeholder="URL" class="form-control">
+                </div>
+                <button type="button" class="btn btn-outline-dark btn-lg">Добавить</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
