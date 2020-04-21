@@ -5,11 +5,17 @@
         <div class="col-lg-6">
             <h2>Добавить картинку</h2>
             <form action="{{ url_for('add_pic') }}" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="title" placeholder="Заголовок">
+                </div>
+                <div class="form-group">
+                    <textarea name="Description" class="form-control" rows="5" placeholder="Описание"></textarea>
+                </div>
                 <div class="input-group mb-3 input-group-lg">
                     <div class="input-group-prepend">
                         <span class="input-group-text">URL картинки</span>
                     </div>
-                    <input type="url" name="picture" placeholder="URL" class="form-control">
+                    <input type="text" name="picture" placeholder="URL" class="form-control">
                 </div>
                 <button class="btn btn-outline-dark btn-lg">Добавить</button>
             </form>

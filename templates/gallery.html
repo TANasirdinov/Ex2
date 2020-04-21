@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    {% for pic in gal_list %}
-    <img height="200" src="{{pic}}" alt="">
-    <hr>
-    {% endfor %}
+    <div>
+        {% for pic in gal_list %}
+            <h4>{{ pic.0 }}</h4>
+            <div>{{ pic.1 }}</div>
+            <img src="{{ pic.2 }}">
+            <hr>
+        {% endfor %}
+    </div>
 {% endblock %}
